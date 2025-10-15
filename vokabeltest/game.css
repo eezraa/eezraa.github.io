@@ -1,0 +1,201 @@
+html {
+    background-color: whitesmoke;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    color: #242424;
+}
+
+.mainbox {
+    border: 2px solid #242424;
+    border-radius: 8px;
+    padding: 10vh;
+    padding-right: 25vh;
+    background-color: white;
+
+    transition: all 1s;
+}
+
+.titleline, .progressline {
+    width: 60vh;
+    font-family: "Funnel Display";
+    display: flex;
+}
+
+.titleline > span {
+    margin: 0px;
+}
+
+.progressline > span {
+    margin: 0px;
+}
+
+.progressline {
+    justify-content: right;
+}
+
+.progressline > button {
+    font-family: "Funnel Display";
+    background-color: whitesmoke;
+    border: none;
+    padding: 0vw 1vw;
+    margin-right: 1vw;
+    font-size: 2vh;
+}
+
+.word {
+    font-family: "Funnel Display";
+    font-size: 8vh;
+    margin-bottom: 2vh;
+}
+
+.genderoptions {
+    font-family: "Funnel Display";
+    margin-bottom: 3vh;
+}
+
+.genderoptions > button {
+    font-family: "Funnel Display";
+    background-color: white;
+    border: 1px solid #242424;
+    border-radius: 5px;
+    padding: 0.3vw 1vw;
+    margin-right: 1vw;
+    font-size: 3vh;
+
+    transition: all 0.2s ease-in-out;
+}
+
+.genderoptions > button:hover {
+    translate: 0px -0.4vh;
+}
+
+button.der {
+    background-color: lightblue;
+}
+
+button.die {
+    background-color: pink;
+}
+
+button.das {
+    background-color: lightgreen;
+}
+
+.pluralinput {
+    font-family: "Funnel Display";
+}
+
+.pluralinput > input {
+    font-family: "Funnel Display";
+    font-size: 2vh;
+    border: 1px solid #242424;
+    border-radius: 5px;
+    padding: 0.3vw 1vw;
+    width: 10vw;
+
+    transition: all 0.3s ease-in;
+}
+
+.pluralinput > input:focus {
+    outline: none;
+    background-color: lightyellow;
+    width: 15vw;
+}
+
+.pluralinput > input:valid {
+    width: 15vw;
+}
+
+.pluralinput > input:hover {
+    background-color: lightyellow;
+}
+
+.pluralinput > input:valid + button {
+    background-color: lightyellow;
+    color: #242424;
+    border: 1px solid #242424;
+}
+
+.pluralinput > button {
+    font-family: "Funnel Display";
+    font-size: 2vh;
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 0.3vw 1vw;
+    margin-left: 1vw;
+
+    color: white;
+
+    transition: all 0.4s ease-in-out;
+}
+
+.pluralinput > input:valid + button:hover {
+    letter-spacing: 0.2vw;
+    padding-left: 1.7vw;
+    padding-right: 1.7vw;
+}
+
+span {
+    font-size: 3vh;
+    margin-left: 3vw;
+}
+
+span.correct {
+    color: lightgreen;
+}
+
+span.correct::before {
+    content: "✓";
+    color: lightgreen;
+    margin-right: 1vw;
+}
+
+span.incorrect {
+    color: pink;
+}
+
+span.incorrect::before {
+    content: "X";
+    color: pink;
+    margin-right: 1vw;
+}
+
+button.ready {
+    background-color: lightyellow;
+}
+
+.next {
+    display: none;
+}
+
+.next > button {
+    font-family: "Funnel Display";
+    font-size: 2vh;
+    background-color: lightyellow;
+    border: 1px solid #242424;
+    border-radius: 5px;
+    padding: 0.3vw 1vw;
+    margin-top: 3vh;
+
+    transition: all 0.7s ease-in-out;
+}
+
+.next > button:hover {
+    translate: 0px -0.4vh;
+}
+
+.results {
+    font-family: "Funnel Display";
+    margin-left: 3vw;
+}

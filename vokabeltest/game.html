@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>vokabeltest</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Special+Gothic+Expanded+One&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="./game.css">
+        <script src="./game.js" defer></script>
+    </head>
+    <body>
+        <div class="titleline">
+            <span>vokabeltest</span>
+        </div>
+        <div class="mainbox">
+            <div class="word" id="word">Apfel</div>
+            <div class="genderoptions">
+                <button id="der">der</button>
+                <button id="die">die</button>
+                <button id="das">das</button>
+                <span id="gendercheck"></span>
+            </div>
+            <div class="pluralinput">
+                <input type="text" placeholder="pl." id="plural" required/>
+                <button id="go"> check </button> 
+                <span id="pluralcheck"></span>
+            </div>
+            <div class="hidden next">
+                <button id="next"> next </button>
+            </div>
+        </div>
+        <div class="progressline">
+            <button id="skip">skip</button>
+            <span id="progress">1/5</span>
+        </div>
+    </body>
+</html>
