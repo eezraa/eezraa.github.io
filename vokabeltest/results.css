@@ -5,13 +5,12 @@ html {
 
 body {
     width: 100vw;
-    height: 100vh;
     margin: 0px;
 
     display: flex;
     justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    padding-top: 20vh;
+    padding-bottom: 20vh;
 
     color: #242424;
 }
@@ -52,6 +51,7 @@ body {
     padding: 10vh;
     padding-right: 25vh;
     background-color: white;
+    width: 40%;
 
     transition: all 1s;
     animation-name: "load";
