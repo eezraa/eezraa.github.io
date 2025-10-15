@@ -32,5 +32,8 @@ results.forEach((el) => {
 word_el.innerHTML = Math.floor((current_points/max_points) * 100) + "% (" + current_points + "/" + max_points + ")";
 
 again_el.addEventListener("click", () => {
-    window.location.href = "home.html";
+    setTimeout(() => {
+        window.location.href = "home.html";
+    }, 600);
+    document.getElementsByClassName("mainbox")[0].classList.add("exit");
 })

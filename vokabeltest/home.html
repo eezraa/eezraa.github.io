@@ -18,7 +18,10 @@
         </div>
         <script>
             document.getElementById("start").addEventListener("click", () => {
-                document.location.href = "game.html";
+                setTimeout(()=>{
+                    document.location.href = "game.html";
+                }, 600);
+                document.getElementsByClassName("mainbox")[0].classList.add("exit");
             })
         </script>
     </body>

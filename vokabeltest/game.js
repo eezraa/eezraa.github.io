@@ -182,7 +182,8 @@ function next_word(){
     }
 
     if(cur_words == max_words){
-        end_test();
+        document.getElementsByClassName("mainbox")[0].classList.add("exit");
+        setInterval(()=>end_test(), 600)
         return;
     }
 

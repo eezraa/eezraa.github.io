@@ -15,6 +15,18 @@ body {
     color: #242424;
 }
 
+@keyframes load{
+    0% {
+        translate: -500px 0px;
+        opacity: 0;
+    }
+
+    100% {
+        translate: 0px 0px;
+        opacity: 1;
+    }
+}
+
 .mainbox {
     border: 2px solid #242424;
     border-radius: 8px;
@@ -23,6 +35,58 @@ body {
     background-color: white;
 
     transition: all 1s;
+    animation-name: "load";
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+}
+
+@keyframes exit{
+    0% {
+        translate: 0px 0px;
+        opacity: 1;
+    }
+
+    100% {
+        translate: 500px 0px;
+        opacity: 0;
+    }
+}
+
+.mainbox.exit {
+    animation-name: "exit";
+    animation-duration: 0.75s;
+    animation-timing-function: ease-out;
+}
+
+@keyframes change {
+    0% {
+        translate: 0px 0px;
+        opacity: 1;
+    }
+
+    45% {
+        translate: 30px 30px;
+        rotate: 15deg;
+        opacity: 0;
+    }
+
+    55% {
+        translate: -30px -30px;
+        rotate: -15deg;
+        opacity: 0;
+    }
+
+    100% {
+        translate: 0px 0px;
+        rotate: 0deg;
+        opacity: 1;
+    }
+}
+
+.mainbox.change {
+    animation-name: "change";
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
 }
 
 .titleline, .progressline {
@@ -141,9 +205,7 @@ button.das {
 }
 
 .pluralinput > input:valid + button:hover {
-    letter-spacing: 0.2vw;
-    padding-left: 1.7vw;
-    padding-right: 1.7vw;
+    translate: 0px -5px;
 }
 
 span {

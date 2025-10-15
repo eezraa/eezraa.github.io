@@ -16,6 +16,36 @@ body {
     color: #242424;
 }
 
+@keyframes load{
+    0% {
+        translate: -500px 0px;
+        opacity: 0;
+    }
+
+    100% {
+        translate: 0px 0px;
+        opacity: 1;
+    }
+}
+
+@keyframes exit{
+    0% {
+        translate: 0px 0px;
+        opacity: 1;
+    }
+
+    100% {
+        translate: 500px 0px;
+        opacity: 0;
+    }
+}
+
+.mainbox.exit {
+    animation-name: "exit";
+    animation-duration: 0.75s;
+    animation-timing-function: ease-out;
+}
+
 .mainbox {
     border: 2px solid #242424;
     border-radius: 8px;
@@ -24,6 +54,9 @@ body {
     background-color: white;
 
     transition: all 1s;
+    animation-name: "load";
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
 }
 
 .word {
