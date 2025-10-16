@@ -116,6 +116,10 @@ body {
     font-size: 2vh;
 }
 
+.progressline > button:hover {
+    text-decoration: underline;
+}
+
 .word {
     font-family: "Funnel Display";
     font-size: 8vh;

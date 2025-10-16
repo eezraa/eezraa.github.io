@@ -71,6 +71,7 @@ let pluralcheck_el = document.getElementById("pluralcheck");
 let next_el = document.getElementById("next");
 let progress_el = document.getElementById("progress");
 let skip_el = document.getElementById("skip");
+let answer_el = document.getElementById("answer");
 
 // functions
 
@@ -124,12 +125,11 @@ function gender_pronoun(gender){
             return "das";
         
         default:
-            break;
+            return "-";
     }
 }
 
 function check(){
-
     if(!sel_plural) return;
 
     if (sel_gender == current_word[1]){
@@ -193,6 +193,12 @@ function next_word(){
     new_word();
 }
 
+function auto_answer(){
+    sel_gender = "-";
+    sel_plural = "-";
+    check();
+}
+
 function end_test(){
     localStorage.setItem("results", JSON.stringify(results));
     window.location.href = "results.html";
@@ -210,6 +216,7 @@ plural_el.addEventListener("change", () => plural_change());
 go_el.addEventListener("click", () => check());
 next_el.addEventListener("click", () => next_word());
 skip_el.addEventListener("click", () => end_test());
+answer_el.addEventListener("click", () => auto_answer());
 
 update_progress();
 new_word();
