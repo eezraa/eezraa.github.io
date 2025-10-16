@@ -130,7 +130,7 @@ function gender_pronoun(gender){
 }
 
 function check(){
-    if(!sel_plural) return;
+    plural_change();
 
     if (sel_gender == current_word[1]){
         gendercheck_el.classList.add("correct");
@@ -211,12 +211,21 @@ die_el.addEventListener("click", () => select_gender("f"));
 das_el.addEventListener("click", () => select_gender("d"));
 
 plural_el.value = "";
-plural_el.addEventListener("change", () => plural_change());
 
 go_el.addEventListener("click", () => check());
 next_el.addEventListener("click", () => next_word());
 skip_el.addEventListener("click", () => end_test());
 answer_el.addEventListener("click", () => auto_answer());
+
+document.addEventListener("keypress", (e) => {
+    if(e.key == "Enter"){
+        if(go_el.style.display != "none"){
+            check();
+        }else{
+            next_word();
+        }
+    }
+})
 
 update_progress();
 new_word();
